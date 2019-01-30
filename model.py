@@ -36,4 +36,3 @@ class TECNN(nn.Module):
             src = torch.cat(layer_outputs, dim=1)
             src = self._dropout(src)
         src = src.transpose(1, 2)
-        
