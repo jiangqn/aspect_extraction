@@ -2,7 +2,7 @@ from utils import *
 import numpy as np
 
 data_path = '../data/official_data/processed_data/sentences_term_restaurant.txt'
-target_path = '../data/official_data/processed_data/restaurant.npz'
+target_path = '../data/official_data/processed_data/restaurant/'
 
 file = open(data_path)
 data_dict = {}
@@ -58,4 +58,14 @@ for i, (sentence, label) in enumerate(zip(sentences, labels)):
     for j, flag in enumerate(label):
         labels_np[i, j] = flag
 
-np.savez(target_path, sentences=sentences_np, labels=labels_np)
+dev_rate = 0.2
+dev_num = int(num * dev_rate)
+train_num = num - dev_num
+
+train_sentences = sentences_np[0: train_num].copy()
+train_labels = sentences_np[0: train_num].copy()
+dev_sentences = sentences_np[train_num: num].copy()
+dev_labels = sentences_np[train_num: num].copy()
+
+np.savez(target_path + 'train.npz', sentences=train_sentences, labels=train_labels)
+np.savez(target_path + 'dev.npz', sentences=dev_sentences, labels=dev_labels)
