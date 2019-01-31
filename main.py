@@ -14,8 +14,9 @@ class Trainer(object):
 
     def __init__(self, config):
         self._config = config
-        self._path = {}
-        self._path['data'] = self._config.base_path + 'restaurant.npz'
+        self._paths = {}
+        self._paths['train_data'] = self._config.base_path + 'train.npz'
+        self._paths['dev_data'] = self._config.base_path + 'dev.npz'
 
     def _make_model(self):
         embedding = nn.Embedding(4602, 300)
@@ -27,11 +28,18 @@ class Trainer(object):
         return model
 
     def run(self):
-        dataset = TecnnDataset(self._path['data'])
-        dataloader = DataLoader(
-            dataset=dataset,
+        train_dataset = TecnnDataset(self._paths['train_data'])
+        train_loader = DataLoader(
+            dataset=train_dataset,
             batch_size=self._config.batch_size,
             shuffle=True,
+            num_workers=2
+        )
+        dev_dataset = TecnnDataset(self._paths['dev_data'])
+        dev_loader = DataLoader(
+            dataset=dev_dataset,
+            batch_size=self._config.batch_size,
+            shuffle=False,
             num_workers=2
         )
         model = self._make_model()
@@ -42,7 +50,7 @@ class Trainer(object):
             total_samples = 0
             total_loss = 0
             total_acc = 0
-            for step, data in enumerate(dataloader):
+            for step, data in enumerate(train_loader):
                 optimizer.zero_grad()
                 sentences, labels = data
                 sentences, labels = sentences.cuda(), labels.cuda()
@@ -53,11 +61,30 @@ class Trainer(object):
                 total_loss += loss * sentences.size(0)
                 total_acc += acc * sentences.size(0)
                 loss.backward()
-                print('[epoch %2d] [step %3d] [loss: %.4f] [acc: %.4f]' % (epoch, step, loss, acc))
                 optimizer.step()
-            avg_loss = total_loss / total_samples
-            avg_acc = total_acc / total_samples
-            print('[epoch %2d] [loss %.6f] [accuracy %.6f]' % (epoch, avg_loss, avg_acc))
+            train_loss = total_loss / total_samples
+            train_acc = total_acc / total_samples
+            dev_loss, dev_acc = self.eval(model, criterion, dev_loader)
+            print('[epoch %2d] [train_loss %.4f] [train_acc %.4f] [dev_loss %.4f] [dev_acc %.4f]' %
+                  (epoch, train_loss, train_acc, dev_loss, dev_acc))
+
+    def eval(self, model, criterion, data_loader):
+        total_samples = 0
+        total_loss = 0
+        total_acc = 0
+        for data in data_loader:
+            sentences, labels = data
+            sentences, labels = sentences.cuda(), labels.cuda()
+            with torch.no_grad():
+                logits = model(sentences)
+                loss = self._loss(sentences, labels, logits, criterion)
+                acc = self._accuracy(sentences, labels, logits)
+                total_samples += sentences.size(0)
+                total_loss += loss * sentences.size(0)
+                total_acc += acc * sentences.size(0)
+        avg_loss = total_loss / total_samples
+        avg_acc = total_acc / total_samples
+        return avg_loss, avg_acc
 
     def _loss(self, sentences, labels, logits, criterion):
         sentences = sentences.view(-1)
@@ -77,11 +104,11 @@ class Trainer(object):
         return accuracy
 
 parser = argparse.ArgumentParser()
-parser.add_argument('--base_path', type=str, default='./data/official_data/processed_data/')
+parser.add_argument('--base_path', type=str, default='./data/official_data/processed_data/restaurant/')
 parser.add_argument('--batch_size', type=int, default=128)
-parser.add_argument('--num_epoches', type=int, default=10)
+parser.add_argument('--num_epoches', type=int, default=100)
 parser.add_argument('--layers', type=list, default=[[[128, 5], [128, 3]], [[256, 5]], [[256, 5]], [[256, 5]]])
-parser.add_argument('--learning_rate', type=float, default=1e-3)
+parser.add_argument('--learning_rate', type=float, default=3e-4)
 parser.add_argument('--dropout', type=float, default=0.5)
 
 config = parser.parse_args()

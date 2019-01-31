@@ -44,7 +44,7 @@ for sentence, positions in data_dict.items():
     sentences.append(result)
     labels.append(label)
     vocab.add_list(result)
-    max_len = max(max_len, len(labels))
+    max_len = max(max_len, len(result))
 
 word2index, index2word = vocab.get_vocab()
 num = len(sentences)
@@ -63,9 +63,9 @@ dev_num = int(num * dev_rate)
 train_num = num - dev_num
 
 train_sentences = sentences_np[0: train_num].copy()
-train_labels = sentences_np[0: train_num].copy()
+train_labels = labels_np[0: train_num].copy()
 dev_sentences = sentences_np[train_num: num].copy()
-dev_labels = sentences_np[train_num: num].copy()
+dev_labels = labels_np[train_num: num].copy()
 
 np.savez(target_path + 'train.npz', sentences=train_sentences, labels=train_labels)
 np.savez(target_path + 'dev.npz', sentences=dev_sentences, labels=dev_labels)
