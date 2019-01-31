@@ -1,5 +1,7 @@
 from utils import *
 import numpy as np
+import os
+import pickle
 
 data_path = '../data/official_data/processed_data/sentences_term_restaurant.txt'
 target_path = '../data/official_data/processed_data/restaurant/'
@@ -69,3 +71,8 @@ dev_labels = labels_np[train_num: num].copy()
 
 np.savez(target_path + 'train.npz', sentences=train_sentences, labels=train_labels)
 np.savez(target_path + 'dev.npz', sentences=dev_sentences, labels=dev_labels)
+
+with open(os.path.join(target_path + 'word2index.pickle'), 'wb') as handle:
+    pickle.dump(word2index, handle)
+with open(os.path.join(target_path + 'index2word.pickle'), 'wb') as handle:
+    pickle.dump(index2word, handle)
