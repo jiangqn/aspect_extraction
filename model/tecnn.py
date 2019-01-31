@@ -25,7 +25,7 @@ class TECNN(nn.Module):
             self._layers.append(layer)
             input_size = output_size
 
-    def forward(self, src, src_lens):
+    def forward(self, src):
         src = self._embedding(src)
         src = self._dropout(src).transpose(1, 2)
         for layer in self._layers:
