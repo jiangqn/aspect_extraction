@@ -4,13 +4,11 @@ import torch.optim as optim
 import numpy as np
 import argparse
 import os
-from model.tecnn import TECNN
+from model.decnn import DECNN
 from torch.utils.data import DataLoader
-from dataset import TecnnDataset
+from dataset import DecnnDataset
 
-os.environ["CUDA_VISIBLE_DEVICES"] = "2"
-
-class Trainer(object):
+class DecnnTrainer(object):
 
     def __init__(self, config):
         self._config = config
@@ -26,30 +24,34 @@ class Trainer(object):
         )
         embedding.weight.data.copy_(torch.from_numpy(np.load(self._paths['glove_path'])))
         # embedding.weight.requires_grad = False
-        model = TECNN(
+        model = DECNN(
             embedding=embedding,
             dropout=self._config.dropout,
             layers=self._config.layers
         )
         return model
 
-    def run(self):
-        train_dataset = TecnnDataset(self._paths['train_data'])
+    def _make_data(self):
+        train_dataset = DecnnDataset(self._paths['train_data'])
         train_loader = DataLoader(
             dataset=train_dataset,
             batch_size=self._config.batch_size,
             shuffle=True,
             num_workers=2
         )
-        dev_dataset = TecnnDataset(self._paths['dev_data'])
+        dev_dataset = DecnnDataset(self._paths['dev_data'])
         dev_loader = DataLoader(
             dataset=dev_dataset,
             batch_size=self._config.batch_size,
             shuffle=False,
             num_workers=2
         )
+        return train_loader, dev_loader
+
+    def run(self):
         model = self._make_model()
         model = model.cuda()
+        train_loader, dev_loader = self._make_data()
         criterion = nn.CrossEntropyLoss(reduction='none')
         optimizer = optim.Adam(model.parameters(), lr=self._config.learning_rate)
         max_f1_score = 0
@@ -123,6 +125,8 @@ class Trainer(object):
         f1_score = (2 * TP) / (2 * TP + FP + FN)
         return f1_score
 
+os.environ["CUDA_VISIBLE_DEVICES"] = "2"
+
 parser = argparse.ArgumentParser()
 parser.add_argument('--base_path', type=str, default='./data/official_data/processed_data/restaurant/')
 parser.add_argument('--batch_size', type=int, default=128)
@@ -135,5 +139,5 @@ parser.add_argument('--dropout', type=float, default=0.5)
 
 config = parser.parse_args()
 
-trainer = Trainer(config)
+trainer = DecnnTrainer(config)
 trainer.run()

@@ -2,10 +2,10 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-class TECNN(nn.Module):
+class DECNN(nn.Module):
 
     def __init__(self, embedding, dropout, layers):
-        super(TECNN, self).__init__()
+        super(DECNN, self).__init__()
         self._embedding = embedding
         self._dropout = nn.Dropout(dropout)
         self._layers = nn.ModuleList()
