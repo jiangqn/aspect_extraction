@@ -5,6 +5,7 @@ import pickle
 
 data_path = '../data/official_data/processed_data/sentences_term_restaurant.txt'
 target_path = '../data/official_data/processed_data/restaurant/'
+glove_path = '../data/glove.840B.300d.txt'
 
 file = open(data_path)
 data_dict = {}
@@ -50,6 +51,7 @@ for sentence, positions in data_dict.items():
 
 word2index, index2word = vocab.get_vocab()
 num = len(sentences)
+glove = load_word_embeddings(glove_path, len(index2word), 300, word2index)
 
 sentences_np = np.zeros((num, max_len), dtype=np.int32)
 labels_np = np.zeros((num, max_len), dtype=np.int32)
@@ -71,6 +73,8 @@ dev_labels = labels_np[train_num: num].copy()
 
 np.savez(target_path + 'train.npz', sentences=train_sentences, labels=train_labels)
 np.savez(target_path + 'dev.npz', sentences=dev_sentences, labels=dev_labels)
+
+np.save(target_path + 'glove.npy', glove)
 
 with open(os.path.join(target_path + 'word2index.pickle'), 'wb') as handle:
     pickle.dump(word2index, handle)

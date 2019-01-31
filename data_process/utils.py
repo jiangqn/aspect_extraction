@@ -1,11 +1,18 @@
 from nltk import word_tokenize
 import operator
+import os
+import numpy as np
 
 def nltk_tokenize(text):
     return word_tokenize(text)
 
 PAD = '<PAD>'
 UNK = '<UNK>'
+
+PAD_INDEX = 0
+UNK_INDEX = 1
+
+INIT = 1e-2
 
 class Vocab(object):
 
@@ -41,3 +48,16 @@ class Vocab(object):
             else:
                 index2word[index] = word
         return word2index, index2word
+
+def load_word_embeddings(fname, vocab_size, embed_size, word2index):
+    if not os.path.isfile(fname):
+        raise IOError('Not a file', fname)
+
+    word2vec = np.random.uniform(-INIT, INIT, [vocab_size, embed_size])
+    with open(fname, 'r', encoding='utf-8') as f:
+        for line in f:
+            content = line.split(' ')
+            if content[0] in word2index:
+                word2vec[word2index[content[0]]] = np.array(list(map(float, content[1:])))
+    word2vec[PAD_INDEX, :] = 0
+    return word2vec
