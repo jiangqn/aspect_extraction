@@ -1,0 +1,100 @@
+ng/site=cs New to Citysearch? Sign up | Sign In var divs = new Array; divs[0] = "h_address"; divs[1] = "h_neighborhood"; function hotelsChangeMe(id) { switchSearchArea(id); if(document
+getElementById){ var len = divs
+length; for (var i=0;i var flavor_text = new Object();flavorMenus
+by_cuisine = new Array( 'All cuisine', '/search?histoindex_left=cw1flavor_text['by_cuisine']='cuisine';flavorMenus
+by_price = new Array( '$ (under $20)', '/search?cw4=1flavor_text['by_price']='prices';flavorMenus
+by_features = new Array( 'All features', '/search?histoindex_left=cw3flavor_text['by_features']='features'; SEARCH Citysearch Web Search Citysearch with Business Name or Keyword 	 Search restaurants only Search by name only Address, City State, or Zip | Neighborhood Address, city state, or zip | Neighborhood Address, city state, or zip |Airport Address, city state, or zip |Attraction Select a New York Neighborhood Astoria Bronx Brooklyn Carroll Gardens/Cobble Hill Chelsea Chinatown East Village Financial District Flatiron District Fort Greene Gramercy Park Greenwich Village Harlem Little Italy Lower East Side Meatpacking District Midtown East Midtown W/Hells Kitchen Murray Hill Park Slope Queens Soho Times Square/Theater Dist Tribeca Union Square Upper East Side Upper West Side West Village Williamsburg Select an New York Airport Select an New York Attraction  My Locations		 Add/edit locations Recent Locations		 Clear recent locations Search restaurants by: Cuisine| document
+write(insertMenuRest('by_cuisine',195,0,0,380)); Prices| document
+write(insertMenuRest('by_price',195,0,0,600)); Features document
+write(insertMenuRest('by_features',195,0,0,530)); Search Ask
+com with your Question or Keyword document
+getElementById('hotel_constrained_search')
+style
+display = "block"; document
+getElementById('locations_pulldown')
+style
+display = "block"; document
+getElementById('h_address_block')
+style
+display = "block"; document
+getElementById('addressSearchText')
+style
+display = "block"; HOME RESTAURANTS BARS CLUBS HOTELS SHOPPING SPA BEAUTY MOVIES EVENTS MAPS MORE CATEGORIES New York Restaurant Profile Battery Gardens17 State St New York,NY10004 (212) 809-5508  Cross Street: Inside Battery Park  Directions: 1,9 at South Ferry 	 EditorialProfile    ReadMore|UserReviews(11) New!Send 2 PhoneWebsite SendtoaFriend Restaurant Info Price: $$$ Hours: Mon-Sat 11:30am-3pm, 5pm-9pm Sun 11:30am-3pm Payment: American Express Discover MasterCard Visa Dress Code: Casual to dressy Special Features: Catering View Kid Friendly Outdoor Dining Waterfront Dining Group Dining Online Reservations Own this business? Enhance or edit your listing See something wrong? Suggest a correction Things to do nearby: 17 State St New York,NY10004 Restaurants Hotels Bars Movie Theaters Department Stores Shopping Centers Grocery Stores Pharmacies Florists Banks Related Searches New York Restaurants Search anything in New York Search Yellow Pages in New York Search other Cities Browse New York Editorial Lists var consumerLat=('407028'||valuesObj['lat']); var consumerLong=('-740143'||valuesObj['long']); var mypfpsource = 'http://pfp
+citysearch
+com/pagead/ads?lat=' + consumerLat + 'if (typeof(ModuleKey) != "undefined"){ document
+write("} else { document
+write("");} Citysearch EditorialProfile
+My roommate and I share the same birthday, so we decided to treat ourselves by going with two other girlfriends to Battery Gardens, and I can safely say this was the best birthday dinner I've ever had
+The food was absolutely phenomenal; every bite was perfect
+The service was fast but not overbearing; they brought out appetizers and entrees swiftly but gave us plenty of time to linger over our meals
+In addition, the decor is lovely, and the view is unbelievable
+But what really rounded out the night was our service, which was impeccable
+For whatever reason, and I don't think it was just the birthdays, the wait staff bent over backwards to make our evening perfect
+In the end, all four of us got two rounds of drinks for free (including a delicious grappa) and my roommate and I also got our desserts gratis
+AND some of the servers came over to sing happy birthday
+It was amazing
+While I doubt they do this every day, the wait staff was so wonderful I didn't need to get the special treatment to have a fantastic evening
+We had such a lovely time that we promised our waiter and the bartender that we would be back for happy hour - and we most definitely will
+Highly, highly recommended
+I was so amazed when I came here the first time for a catered function, I decided to bring my mom aunt for a Mother's Day brunch
+They loved the atmosphere, food and service
+The only downer was the fruit fondue desert from the prie fixe menu wasn't as good as it looked (the chocolate was runny), and the wait between our salad and main course was too long
+The rest of the food was creative and delicious
+I would definitely like to come again
+Maybe I can hint to my boyfriend to come here for my birthday
+Maybe the most amazing outdoor setting in the city
+views of the Statue of Liberty from the very tip of Manhattan Island where the East and Hudson rivers meet,
+and ohmygosh the food
+opt for the sea bass, maybe a pizza and defintely have the chocolate dessert sampler
+What a great place to have a party or major celebration
+Great staff
+very cool crowd, awesome concept executed very, very well!!
+My experience at Battery Gardens will not soon be forgotten
+The food and service were outstanding, accompanied by one of the most spectacular views the city has to offer
+I recommend sitting outside on a nice day to take in the full experience the resturant has to offer
+The Chilaen Sea Bass is a must and the brick oven pizzas are yummy as well
+The chochalte trio dessert had to be my favorite though
+I will be sure to go back there soon!!
+The food was terrible
+Pre-Fixe menu for Easter proved to be the worsed served catered meal
+We felt we were at a bad wedding
+Crab cakes were burnt, and had specs of crab meat with a horrible sauce dribbled mostly on the dish
+Salad was old
+Chicken was hard and dry, rice was overcooked, string beans were okay (well thank you) and even the dessert was terrible
+A fondue that the chocolate was watered and came out of a can along with the fruit
+You should be ashamed to serve this at the prices you charged
+And, then the service was rushed, although half the place was empty
+Final topper - they charged for a refill of coffee
+So overpriced, terrible food, poor service
+Oh, the glass of champagne was served warm, but they did bring another glass without charging
+Oh my, what a mess!
+battery gardens is a gem in
+it's location is without equal in manhattan
+located at the bottom of manhattan island where the east and hudson rivers meet, you'll find few views better
+when the weather allows, the outdoor dining has no equal
+likewise, the outdoor bar is key, attracting the bold and the beautiful
+however, regardless of weather, the food is excellent, the service friendly and efficient and i have yet to meet someone who was dissappointed when they left
+I went to dinner there the other evening because a friend recommended it to me
+Battery Gardens is an oasis in the big city
+The menu is creative and well executed
+Everybody was very friendly, especially the owner
+I will definitely return again in the summer for dinner on the patio
+I have lived downtown for several years and finally made it over to Battery Gardens
+The views are absolutely beautiful
+This is one of the most romantic places in the city
+The sea bass was too die for
+The service was good and the staff is friendly
+As it turns out the ownership of the restaurant has changed about a year ago and everything is completely different
+So don't be fooled by the old reviews
+I can't wait to go back
+As someone else mentioned I was a bit skeptical in trying this restaurant out as some of the reviews are not very positive
+However, my boyfriend and I decided to go during the 4th of July ('05) and we had a great experience
+The full menu was offered and everything was great
+The location as well as the ambiance is wonderful and would recommend it if you are looking for a nice evening out (on the water)
+Although the info states casual to dressy it is actually pretty casual
+I will definitely return
+I read some mixed reviews on citysearch but decided to give this place a shot
+If you go on a sunny day the view is  absolutely gorgeous
+The space is very airy, modern and a big contrast to most of the closets I eat in uptown
+My only complaint is waiting a bit between the appetizer and the main course but it was well worth it
+The Miso Cod is out of this world! The menu definitely had a lot of attractive offers too

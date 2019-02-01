@@ -1,0 +1,100 @@
+html --Battery Gardens - New York, NY, 10004 - Citysearch A:link {color:#069;}A:visited {color:#666;}A:hover {text-decoration: none; color: #000;}A:active {text-decoration: none; color: #09c;}var mainStyleSheet = new Object(); mainStyleSheet
+src="http://a376
+g
+akamaitech
+net/7/376/33/387e0caadeb46b/images
+citysearch
+com/sys/css/masterIEStyle
+css";var debug = false;var ref_uri = "/profile/7091055";var tier = 'tier1';var baseProdHost= 'citysearch
+com';var brand = 'citysearch';var site = 'cityguide';var prefix= '';var context = 'restaurants';var marketProp= 'New York';var marketLat= '407567';var marketLon= '-739858';var marketRadius= '15';var url = 'newyork
+citysearch
+com/profile/7091055';var forceWhere = '';var t_gif = new Image(); t_gif
+src="http://a808
+g
+akamaitech
+net/7/808/33/5364c6467cb961/images
+citysearch
+com/t
+gif";var rightArrow = new Image(); rightArrow
+src="http://a1612
+g
+akamaitech
+net/7/1612/33/65ccb7a801547d/images
+citysearch
+com/sys/header/arrow
+gif";var flavor_images = new Object();var flavor_menu_break_count = 17;var flavor_menu_max_cols = 3; flavor_images['by_cuisine']=new Image(); flavor_images['by_cuisine']
+src="http://a1612
+g
+akamaitech
+net/7/1612/33/f7a8ee239a1aaa/images
+citysearch
+com/sys/header/by_cuisine
+gif"; flavor_images['by_cuisine_on']=new Image(); flavor_images['by_cuisine_on']
+src="http://a1612
+g
+akamaitech
+net/7/1612/33/95c8b339a1f0f2/images
+citysearch
+com/sys/header/by_cuisine_on
+gif"; flavor_images['by_price']=new Image(); flavor_images['by_price']
+src="http://a1612
+g
+akamaitech
+net/7/1612/33/bc5fbb43f4ec7f/images
+citysearch
+com/sys/header/by_price
+gif"; flavor_images['by_price_on']=new Image(); flavor_images['by_price_on']
+src="http://a1612
+g
+akamaitech
+net/7/1612/33/667c27cac70c56/images
+citysearch
+com/sys/header/by_price_on
+gif"; flavor_images['by_features']=new Image(); flavor_images['by_features']
+src="http://a1612
+g
+akamaitech
+net/7/1612/33/21a70ca6bebd5a/images
+citysearch
+com/sys/header/by_features
+gif"; flavor_images['by_features_on']=new Image(); flavor_images['by_features_on']
+src="http://a1612
+g
+akamaitech
+net/7/1612/33/cfedb22ad77dd5/images
+citysearch
+com/sys/header/by_features_on
+gif";var marketWhereTerm= 'New York, NY';var topic_id = '';var winpops;function openpopup(myurl,id){ var myurl = myurl || null; var id = id || null; if(typeof(myurl) == 'string'){ if (IE){ if(id == null) return; winpops=window
+open('',"customer_frameset","width=725,height=450,location=yes,addressbar=no,menubar=yes,toolbar=yes,statusbar=yes,scrollbars=yes,resizable,left=250,top=150"); var pWin = (document
+getElementById) ? document
+getElementById(id) : null; if(pWin == null) return; pWin
+href=myurl; pWin
+target="customer_frameset"; pWin
+click(); } else { winpops=window
+open(myurl,"customer_frameset","width=725,height=450,location=yes,addressbar=no,menubar=yes,toolbar=yes,statusbar=yes,scrollbars=yes,resizable,left=250,top=150"); } /* Setting opener of daughter win to null to remove opener control from customer javascript
+GM */ winpops
+opener = null; }}function mypopup(new_location,id,parent_location){ var parent_location = parent_location || null; var id = id || null; openpopup(new_location,id); winpops
+focus(); if(parent_location != null if(pWin == null) return; document
+getElementById(id)
+target="_top"; document
+getElementById(id)
+href=parent_location; document
+getElementById(id)
+click(); } else { window
+location=parent_location; } }} document
+onclick=divEventHandler
+documentEvent_stp; Send this listing as a text message to your cell phone
+* Please Enter valid Phone Number To: - - I agree to the Terms and Conditions Terms and Conditions SMS and other charges may apply depending on your carrier and phone plan
+Supported carriers include Alltel, Boost, Dobson Cellular Systems, Cellular One, Cingular Blue (AT, Verizon
+No pre-paid phones are supported
+Your text message was successfully sent! information was sent to To opt out at anytime, send the word STOP to 50909 from your mobile phone
+To get a help message, send the word HELP to 50909 from your mobile phone
+Your message is not sent! Please make sure you type your mobile phone number correctly, and your wireless carrier is supported
+Supported carriers include Alltel, Boost, Dobson Cellular Systems, Cellular One, Cingular Blue (AT, Verizon
+No pre-paid phones are supported
+To opt out at anytime, send the word STOP to 50909 from your mobile phone
+To get a help message, send the word HELP to 50909 from your mobile phone
+var id = 'topbarAdPos1'; var src = "http://ads
+as4x
+tmcs
+net/html
