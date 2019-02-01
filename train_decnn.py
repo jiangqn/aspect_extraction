@@ -15,7 +15,8 @@ class DecnnTrainer(object):
         self._paths = {}
         self._paths['train_data'] = self._config.base_path + 'train.npz'
         self._paths['dev_data'] = self._config.base_path + 'dev.npz'
-        self._paths['glove_path'] = self._config.base_path + 'glove.npy'
+        self._paths['glove_path'] = self._config.base_path + '../glove.npy'
+        self._paths['model_path'] = self._config.base_path + 'decnn.pkl'
 
     def _make_model(self):
         embedding = nn.Embedding(
@@ -74,9 +75,11 @@ class DecnnTrainer(object):
             train_loss = total_loss / total_samples
             train_f1_score = total_f1_score / total_samples
             dev_loss, dev_f1_score = self.eval(model, criterion, dev_loader)
-            max_f1_score = max(max_f1_score, dev_f1_score)
             print('[epoch %3d] [train_loss %.4f] [train_f1_score %.4f] [dev_loss %.4f] [dev_f1_score %.4f]' %
                   (epoch, train_loss, train_f1_score, dev_loss, dev_f1_score))
+            if dev_f1_score > max_f1_score:
+                torch.save(model, self._paths['model_path'])
+                max_f1_score = max(max_f1_score, dev_f1_score)
         print('max_f1_score: %.4f' % max_f1_score)
 
     def eval(self, model, criterion, data_loader):
@@ -128,7 +131,7 @@ class DecnnTrainer(object):
 os.environ["CUDA_VISIBLE_DEVICES"] = "2"
 
 parser = argparse.ArgumentParser()
-parser.add_argument('--base_path', type=str, default='./data/official_data/processed_data/restaurant/')
+parser.add_argument('--base_path', type=str, default='./data/official_data/processed_data/restaurant/extraction/')
 parser.add_argument('--batch_size', type=int, default=128)
 parser.add_argument('--num_epoches', type=int, default=100)
 parser.add_argument('--vocab_size', type=int, default=4602)

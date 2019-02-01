@@ -15,7 +15,9 @@ class GcaeTrainer(object):
         self._paths = {}
         base_path = self._config.base_path
         self._paths['train_data'] = os.path.join(base_path, 'train.npz')
-        self._paths['dev_data'] = os.path.join(base_path, 'test.npz')
+        self._paths['dev_data'] = os.path.join(base_path, 'dev.npz')
+        self._paths['glove_path'] = self._config.base_path + '../glove.npy'
+        self._paths['model_path'] = self._config.base_path + 'gcae.pkl'
 
     def _make_model(self):
         embedding = nn.Embedding(self._config.vocab_size, self._config.embed_size)
@@ -26,8 +28,8 @@ class GcaeTrainer(object):
             kernel_num=self._config.kernel_num,
             kernel_sizes=self._config.kernel_sizes,
             aspect_embedding=embedding,
-            aspect_kernel_num=100,
-            aspect_kernel_sizes=[4],
+            aspect_kernel_num=self._config.aspect_kernel_num,
+            aspect_kernel_sizes=self._config.aspect_kernel_sizes,
             dropout=self._config.dropout
         )
         return model
@@ -52,54 +54,74 @@ class GcaeTrainer(object):
     def run(self):
         model = self._make_model()
         model = model.cuda()
+        train_loader, dev_loader = self._make_data()
         criterion = nn.CrossEntropyLoss()
         optimizer = optim.Adam(model.parameters(), lr=self._config.learning_rate, weight_decay=self._config.l2_reg)
+        max_acc = 0
         for epoch in range(self._config.num_epoches):
-            train_total_cases = 0
-            train_correct_cases = 0
-            for data in train_data:
-                src, _, _, _, term, _, labels, _, _, _ = data
-                src, term, labels = src.cuda(), term.cuda(), labels.cuda()
+            total_samples = 0
+            total_loss = 0
+            total_acc = 0
+            for data in train_loader:
+                sentences, terms, labels = data
+                sentences, terms, labels = sentences.cuda(), terms.cuda(), labels.cuda()
                 optimizer.zero_grad()
-                outputs = model(src, term)
-                _, predicts = outputs.max(dim=1)
-                train_total_cases += labels.shape[0]
-                train_correct_cases += (predicts == labels).sum().item()
-                loss = criterion(outputs, labels)
+                logits = model(sentences, terms)
+                loss = criterion(logits, labels)
                 loss.backward()
-                nn.utils.clip_grad_norm_(model.parameters(), self._config.clip)
+                total_samples += labels.size(0)
+                total_loss += labels.size(0) * loss
+                total_acc += labels.size(0) * self._accuracy(logits, labels)
                 optimizer.step()
-            dev_total_cases = 0
-            dev_correct_cases = 0
-            with torch.no_grad():
-                for data in dev_data:
-                    src, _, _, _, term, _, labels, _, _, _ = data
-                    src, term, labels = src.cuda(), term.cuda(), labels.cuda()
-                    outputs = model(src, term)
-                    _, predicts = outputs.max(dim=1)
-                    dev_total_cases += labels.shape[0]
-                    dev_correct_cases += (predicts == labels).sum().item()
-            train_accuracy = train_correct_cases / train_total_cases
-            dev_accuracy = dev_correct_cases / dev_total_cases
-        for i in range(self._config.num_epoches):
-            print('[epoch %2d] [train_accuracy %.4f] [dev_accuracy %.4f]' % (i, train_results[i], dev_results[i]))
+            train_loss = total_loss / total_samples
+            train_acc = total_acc / total_samples
+            dev_loss, dev_acc = self.eval(model, criterion, dev_loader)
+            print('[epoch %3d] [train_loss %.4f] [train_acc %.4f] [dev_loss %.4f] [dev_acc %.4f]' %
+                  (epoch, train_loss, train_acc, dev_loss, dev_acc))
+            if dev_acc > max_acc:
+                torch.save(model, self._paths['model_path'])
+                max_acc = max(max_acc, dev_acc)
+        print('max_acc %.4f' % max_acc)
 
-os.environ["CUDA_VISIBLE_DEVICES"] = "1"
+    def _accuracy(self, logits, labels):
+        predicts = logits.max(dim=-1, keepdim=False)[1]
+        accuracy = (predicts == labels).float().mean().item()
+        return accuracy
+
+    def eval(self, model, criterion, data_loader):
+        total_samples = 0
+        total_loss = 0
+        total_acc = 0
+        for data in data_loader:
+            sentences, terms, labels = data
+            sentences, terms, labels = sentences.cuda(), terms.cuda(), labels.cuda()
+            with torch.no_grad():
+                logits = model(sentences, terms)
+                loss = criterion(logits, labels)
+                total_samples += labels.size(0)
+                total_loss += labels.size(0) * loss
+                total_acc += labels.size(0) * self._accuracy(logits, labels)
+        avg_loss = total_loss / total_samples
+        avg_acc = total_acc / total_samples
+        return avg_loss, avg_acc
+
+os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--batch_size', type=int, default=128)
-parser.add_argument('--embed_size', type=int, default=300)
-parser.add_argument('--vocab_size', type=int, default=4180)
-parser.add_argument('--learning_rate', type=float, default=0.0001)
-parser.add_argument('--l2_reg', type=float, default=0.002)
+parser.add_argument('--num_epoches', type=int, default=20)
+parser.add_argument('--learning_rate', type=float, default=1e-4)
+parser.add_argument('--l2_reg', type=float, default=0.0)
 parser.add_argument('--dropout', type=float, default=0.2)
-parser.add_argument('--num_epoches', type=int, default=30)
-parser.add_argument('--base_path', type=str, default='./data/restaurant')
+parser.add_argument('--embed_size', type=int, default=300)
+parser.add_argument('--vocab_size', type=int, default=4602)
 parser.add_argument('--kernel_num', type=int, default=100)
 parser.add_argument('--kernel_sizes', type=list, default=[3, 4, 5, 6])
 parser.add_argument('--aspect_kernel_num', type=int, default=100)
-parser.add_argument('--aspect_kernel_sizes', type=list, default=[4])
+parser.add_argument('--aspect_kernel_sizes', type=list, default=[3])
+parser.add_argument('--base_path', type=str, default='./data/official_data/processed_data/restaurant/classification/')
 
 config = parser.parse_args()
+
 trainer = GcaeTrainer(config)
 trainer.run()
