@@ -16,14 +16,16 @@ class GCAE(nn.Module):
             nn.Conv1d(
                 in_channels=embed_size,
                 out_channels=kernel_num,
-                kernel_size=kernel_size
+                kernel_size=kernel_size,
+                padding=kernel_size // 2
             ) for kernel_size in kernel_sizes
         )
         self._sentence_conv_gate = nn.ModuleList(
             nn.Conv1d(
                 in_channels=embed_size,
                 out_channels=kernel_num,
-                kernel_size=kernel_size
+                kernel_size=kernel_size,
+                padding=kernel_size // 2
             ) for kernel_size in kernel_sizes
         )
         self._aspect_conv = nn.ModuleList(
@@ -31,7 +33,7 @@ class GCAE(nn.Module):
                 in_channels=aspect_embed_size,
                 out_channels=aspect_kernel_num,
                 kernel_size=aspect_kernel_size,
-                padding=1
+                padding=aspect_embed_size // 2
             ) for aspect_kernel_size in aspect_kernel_sizes
         )
         self._aspect_linear = nn.Linear(len(aspect_kernel_sizes) * aspect_kernel_num, kernel_num)

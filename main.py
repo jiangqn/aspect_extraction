@@ -1,18 +1,20 @@
 import torch
 import pickle
+import argparse
 from data_process.utils import nltk_tokenize
 
 word2index_path = './data/official_data/processed_data/restaurant/word2index.pickle'
 decnn_path = './data/official_data/processed_data/restaurant/extraction/decnn.pkl'
 gcae_path = './data/official_data/processed_data/restaurant/classification/gcae.pkl'
-data_path = './data/restaurant/train.txt'
+count_dict_path = './data/restaurant/count_dict.pickle'
 
 with open(word2index_path, 'rb') as handle:
     word2index = pickle.load(handle)
 decnn = torch.load(decnn_path)
 gcae = torch.load(gcae_path)
 
-src = 'This place is a great deal for the price and the food they give you'
+with open(count_dict_path, 'rb') as handle:
+    count_dict = pickle.load(handle)
 
 def text2tensor(text):
     tensor = []
@@ -51,13 +53,14 @@ def word_list2text(word_list):
     text = text.strip()
     return text
 
-def process(sentence_text):
+def process(sentence_text, wdata):
     sentence_text = nltk_tokenize(sentence_text.strip().lower())
     sentence = text2tensor(sentence_text)
     logit = decnn(sentence)
     predicts = logit.max(dim=-1)[1]
     predicts = predicts[0].tolist()
     terms = extract_terms(sentence_text, predicts)
+    count = 0
     for term_text in terms:
         print('sentence:', word_list2text(sentence_text))
         print('term:', word_list2text(term_text))
@@ -70,14 +73,36 @@ def process(sentence_text):
         else:
             sentiment = 'negative'
         print('sentiment:', sentiment)
+        option = input()
+        if option == 'y':
+            wdata.write(word_list2text(sentence_text) + '\n')
+            wdata.write(word_list2text(term_text) + '\n')
+            wdata.write(sentiment + '\n')
+            count += 1
+        else:
+            continue
+    return count
 
-# process(src)
+parser = argparse.ArgumentParser()
+parser.add_argument('--data_index', type=int, default=0)
+config = parser.parse_args()
+data_index = config.data_index
 
-file = open(data_path)
+data_path = './data/restaurant/reviews/%04d.txt' % (data_index)
+target_path = './data/restaurant/processed/%04d.txt' % (data_index)
+rdata = open(data_path, 'r', encoding=u'utf-8')
+wdata = open(target_path, 'w', encoding=u'utf-8')
 
-count = 0
-for line in file.readlines():
-    process(line)
-    count += 1
-    if count >= 10:
-        break
+for sentence in rdata:
+    count = 0
+    count += process(sentence, wdata)
+
+count_dict[data_index] = count
+total = 0
+for index in count_dict:
+    total += index
+print('this file: %d' % count)
+print('total samples: %d' % total)
+
+with open(count_dict_path, 'wb') as handle:
+    pickle.dump(count_dict, handle)
