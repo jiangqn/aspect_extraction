@@ -93,8 +93,8 @@ target_path = './data/restaurant/processed/%04d.txt' % (data_index)
 rdata = open(data_path, 'r', encoding=u'utf-8')
 wdata = open(target_path, 'w', encoding=u'utf-8')
 
+count = 0
 for sentence in rdata:
-    count = 0
     count += process(sentence, wdata)
 
 count_dict[data_index] = count
