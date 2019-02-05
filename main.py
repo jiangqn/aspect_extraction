@@ -1,12 +1,15 @@
 import torch
 import pickle
 import argparse
+import os
 from data_process.utils import nltk_tokenize
 
 word2index_path = './data/official_data/processed_data/restaurant/word2index.pickle'
 decnn_path = './data/official_data/processed_data/restaurant/extraction/decnn.pkl'
 gcae_path = './data/official_data/processed_data/restaurant/classification/gcae.pkl'
 count_dict_path = './data/restaurant/count_dict.pickle'
+
+os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 
 with open(word2index_path, 'rb') as handle:
     word2index = pickle.load(handle)
