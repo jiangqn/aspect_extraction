@@ -79,6 +79,15 @@ def process(sentence_text, wdata):
             wdata.write(word_list2text(term_text) + '\n')
             wdata.write(sentiment + '\n')
             count += 1
+        elif option == 'n':
+            wdata.write(word_list2text(sentence_text) + '\n')
+            wdata.write(word_list2text(term_text) + '\n')
+            if sentiment == 'positive':
+                sentiment = 'negative'
+            else:
+                sentiment = 'positive'
+            wdata.write(sentiment + '\n')
+            count += 1
         else:
             continue
     return count
@@ -100,7 +109,7 @@ for sentence in rdata:
 count_dict[data_index] = count
 total = 0
 for index in count_dict:
-    total += index
+    total += count_dict[index]
 print('this file: %d' % count)
 print('total samples: %d' % total)
 
