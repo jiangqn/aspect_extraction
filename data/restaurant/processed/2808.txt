@@ -1,0 +1,291 @@
+if you want latin food do n't waste your money here , go to jackson heights and pay half the price
+food
+negative
+if you want latin food do n't waste your money here , go to jackson heights and pay half the price
+price
+negative
+went to cabana for lunch on a sunday afternoon although i was disappointed the lunch special was n't applied
+lunch
+negative
+went to cabana for lunch on a sunday afternoon although i was disappointed the lunch special was n't applied
+lunch special
+negative
+however , as soon as we walked into cabana i was already salivating over the menu
+menu
+positive
+the food is amazing from the appetizers - the tostones are great to the main dish to the dessert to the coffee
+food
+positive
+the food is amazing from the appetizers - the tostones are great to the main dish to the dessert to the coffee
+appetizers
+positive
+the food is amazing from the appetizers - the tostones are great to the main dish to the dessert to the coffee
+main dish
+positive
+the food is amazing from the appetizers - the tostones are great to the main dish to the dessert to the coffee
+dessert
+positive
+the food is amazing from the appetizers - the tostones are great to the main dish to the dessert to the coffee
+coffee
+positive
+everything from their special sangria to their appetizers and entre were full of flavor , fresh and fun
+sangria
+positive
+everything from their special sangria to their appetizers and entre were full of flavor , fresh and fun
+appetizers
+positive
+everything from their special sangria to their appetizers and entre were full of flavor , fresh and fun
+entre
+positive
+everything from their special sangria to their appetizers and entre were full of flavor , fresh and fun
+flavor
+positive
+i would highly reccommend it if you 're in the mood for food with a lot of flavor
+food
+positive
+i would highly reccommend it if you 're in the mood for food with a lot of flavor
+flavor
+positive
+i 've brought my friends here for a few drinks
+drinks
+positive
+there 's music but not too loud so that you can have a conversation without straining your voice
+music
+positive
+its dark with lit candles which gives it good ambience
+ambience
+positive
+the staff seems ok
+staff
+negative
+i 've visited often for a few years to enjoy their delicious food and elegant atmosphere
+food
+positive
+i 've visited often for a few years to enjoy their delicious food and elegant atmosphere
+atmosphere
+positive
+the downstairs lounge area is worth a peek , too
+downstairs lounge area
+positive
+the pretty waitstaff is always pleasant , but service is inconsistent at best
+waitstaff
+positive
+the pretty waitstaff is always pleasant , but service is inconsistent at best
+service
+positive
+the service is friendly , the food is good , and the crowd is mellow
+service
+positive
+the service is friendly , the food is good , and the crowd is mellow
+food
+positive
+the service is friendly , the food is good , and the crowd is mellow
+crowd
+positive
+a good juke box too
+box
+positive
+the drinks are reasonablly priced and they pour the guinness well
+drinks
+positive
+the drinks are reasonablly priced and they pour the guinness well
+priced
+positive
+the bartenders are all irish and friendly
+bartenders
+positive
+good place with a good mixed crowd
+mixed crowd
+positive
+thursday is especially good with the live music
+live music
+positive
+this place had great dim sum , but i did n't think there was a lot of selection
+dim sum
+positive
+parking is great
+parking
+positive
+and the main entrees are also great
+main entrees
+positive
+it is not a very stylish place , but we had some of the best chinese food we ever had
+place
+negative
+it is not a very stylish place , but we had some of the best chinese food we ever had
+chinese food
+positive
+their peking duck is delicious ! they prepare it as little rolls at your table
+peking duck
+positive
+the service is friendly and attentive
+service
+positive
+( and , oddly , they serve pretty good sangria , too
+sangria
+positive
+not very fancy , but the food here is very good , especially for a restaurant outside of a chinese area
+food
+positive
+you must try the staple dish , the peking duck
+staple dish
+positive
+you must try the staple dish , the peking duck
+peking duck
+positive
+the duck is crispy and juicy and has a lot of flavor
+duck
+positive
+the duck is crispy and juicy and has a lot of flavor
+flavor
+positive
+the seafood here is also very fresh
+seafood
+positive
+oh , and the noodle dishes are excellent cause they are made on site
+noodle dishes
+positive
+the wait staff was very polite and attentive
+wait staff
+positive
+this happened while many diners were enjoying their meal and it was rudes
+meal
+positive
+but otherwise , if you are looking for some good authentic chinese food in queens , definitely give this place a try
+chinese food
+positive
+from the appetizers to the spectacular and always improving wine list , to the delicious entrees
+appetizers
+positive
+from the appetizers to the spectacular and always improving wine list , to the delicious entrees
+wine list
+positive
+from the appetizers to the spectacular and always improving wine list , to the delicious entrees
+entrees
+positive
+and you must try the strawberry zabaglione dessert ! sylvana ( the owner ) is like the italian mother you always wanted
+owner
+positive
+alberto restaurant is a great restaurant -- -fabulous food , intimate setting superb service ! go during the week for a relaxed meal or if going on the weekend , make sure you make a reservation -- the place is always jammed
+food
+positive
+alberto restaurant is a great restaurant -- -fabulous food , intimate setting superb service ! go during the week for a relaxed meal or if going on the weekend , make sure you make a reservation -- the place is always jammed
+setting
+positive
+alberto restaurant is a great restaurant -- -fabulous food , intimate setting superb service ! go during the week for a relaxed meal or if going on the weekend , make sure you make a reservation -- the place is always jammed
+service
+positive
+alberto restaurant is a great restaurant -- -fabulous food , intimate setting superb service ! go during the week for a relaxed meal or if going on the weekend , make sure you make a reservation -- the place is always jammed
+meal
+positive
+they have a great wine list too -- -wine spectator awards for the last five years
+wine list
+positive
+the ambience and food quality makes alberto my absolute favorite restaurant
+ambience
+positive
+the ambience and food quality makes alberto my absolute favorite restaurant
+food quality
+positive
+the only negative is that the decor , brick walls , makes the place a bit noisy , otherwise super
+decor
+negative
+the only negative is that the decor , brick walls , makes the place a bit noisy , otherwise super
+place
+negative
+the only negative is the place is a bit noisy
+place
+negative
+nothing to say , except best food and service around in a long time
+food
+positive
+nothing to say , except best food and service around in a long time
+service
+positive
+the staff is rude and the food is mediocre
+staff
+negative
+the staff is rude and the food is mediocre
+food
+negative
+the food is never prepared as requested
+food
+negative
+the only good thing is the ribs
+ribs
+positive
+i ordered a prime rib and it was cooked to perfection and very flavorful
+rib
+positive
+the atmoshpere in the restaurant is very cheerful and the staff seemed eager to please the guests
+atmoshpere
+positive
+the atmoshpere in the restaurant is very cheerful and the staff seemed eager to please the guests
+staff
+positive
+the staff is always helpful and friendly and the food is always outstanding
+staff
+positive
+the staff is always helpful and friendly and the food is always outstanding
+food
+positive
+the nachos were very very good , but the onion bloom felt too greasy and the calamari was soggy
+nachos
+positive
+the nachos were very very good , but the onion bloom felt too greasy and the calamari was soggy
+onion bloom
+negative
+the nachos were very very good , but the onion bloom felt too greasy and the calamari was soggy
+calamari
+negative
+i ordered the filet mignon medium rare
+filet mignon
+negative
+i noticed that they labeled several of the steaks we ordered wrong , and two steaks that were supposed to be the medium were way off
+steaks
+negative
+this is disappointing , since i am a huuuge steak fan
+steak
+negative
+whoever wrote the previous reviews must of been the owners or partners of this horrible place
+owners
+negative
+whoever wrote the previous reviews must of been the owners or partners of this horrible place
+place
+negative
+the food and the service at santafe is excelent
+food
+positive
+the food and the service at santafe is excelent
+service
+positive
+the servers do their best to accommodate the wishes of every customers that walk into its doors
+servers
+positive
+i have seen some of these servers put up with a lot of difficult cilents and i was very impressed by the way they handled the situation
+servers
+negative
+i 'm thrilled with the quality of the food and the service ! the ribs superb , the steak , the chicken wings , the french fries , the hamburger
+quality
+positive
+i 'm thrilled with the quality of the food and the service ! the ribs superb , the steak , the chicken wings , the french fries , the hamburger
+food
+positive
+i 'm thrilled with the quality of the food and the service ! the ribs superb , the steak , the chicken wings , the french fries , the hamburger
+service
+positive
+i 'm thrilled with the quality of the food and the service ! the ribs superb , the steak , the chicken wings , the french fries , the hamburger
+ribs
+positive
+i 'm thrilled with the quality of the food and the service ! the ribs superb , the steak , the chicken wings , the french fries , the hamburger
+steak
+positive
+i 'm thrilled with the quality of the food and the service ! the ribs superb , the steak , the chicken wings , the french fries , the hamburger
+chicken wings
+positive
+i 'm thrilled with the quality of the food and the service ! the ribs superb , the steak , the chicken wings , the french fries , the hamburger
+french fries
+positive
+i 'm thrilled with the quality of the food and the service ! the ribs superb , the steak , the chicken wings , the french fries , the hamburger
+hamburger
+positive

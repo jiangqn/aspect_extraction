@@ -1,0 +1,195 @@
+the food was overpriced and average
+food
+negative
+things must have been bad on the night the other reviewer was there , but the ambience and food were satisfactory to me
+ambience
+positive
+things must have been bad on the night the other reviewer was there , but the ambience and food were satisfactory to me
+food
+positive
+parking is bad , but its worth the walk
+parking
+negative
+what used to be a great local place to meet and have a good meal , has now become another cookie cutter , cheap looking dive
+place
+positive
+what used to be a great local place to meet and have a good meal , has now become another cookie cutter , cheap looking dive
+meal
+positive
+it seems that the quality of food has gone down too , as a cost cutting measure
+quality of food
+negative
+you 'll enjoy the food served at this unique dining location
+food served
+positive
+you 'll enjoy the food served at this unique dining location
+dining location
+positive
+i recomend that everyone start with the maryland crabcakes
+maryland crabcakes
+positive
+enjoy a nicely prepared salad and indulge in one of the many imported beers on their list
+salad
+positive
+enjoy a nicely prepared salad and indulge in one of the many imported beers on their list
+beers
+positive
+if you 've never had a belgian beer before , you must try it at austin 's ale house
+beer
+positive
+they waitstaff has been upgraded , the decor is very family oriented
+waitstaff
+positive
+they waitstaff has been upgraded , the decor is very family oriented
+decor
+positive
+the prices are decent for this type of food and dining experience
+prices
+positive
+the prices are decent for this type of food and dining experience
+food
+positive
+the prices are decent for this type of food and dining experience
+dining
+positive
+first , the the sauce is amazing ( sweet and tangy )
+sauce
+positive
+second , the crust is perfect-thin and crisp
+crust
+positive
+third , the cheese is good
+cheese
+positive
+and the price is always below market
+price
+positive
+i love sitting on a stool at the old-fashioned counter and paying after i eat
+counter
+negative
+the reviewer who said that no one i know who lives in kew gardens likes this pizza , is wrong
+pizza
+positive
+i do n't know a soul in this neighbrohood ( or outside ) who does not like the pizza there
+pizza
+positive
+at dani you will find a pizza with a thin crust and a tangy tomato sauce
+pizza
+positive
+in addition to pizza , dani has great homemade ravioli and maniccoti
+homemade ravioli
+positive
+i 've searched high low , near and far , but dani 's remains the benchmark for the best pizza in the boroughs
+pizza
+positive
+on wednesdays i will call 1 hour ahead and order 1 large pizza
+pizza
+positive
+you must think that the quality is poor for them to sell it for such a low price
+quality
+negative
+you must think that the quality is poor for them to sell it for such a low price
+price
+positive
+their sauce hints of a touch of too much sweetness but tied with the rest of the pizza , the tastes even out and you get a pizza your mouth will water over
+sauce
+negative
+their sauce hints of a touch of too much sweetness but tied with the rest of the pizza , the tastes even out and you get a pizza your mouth will water over
+tastes
+negative
+their sauce hints of a touch of too much sweetness but tied with the rest of the pizza , the tastes even out and you get a pizza your mouth will water over
+pizza
+negative
+for strictly pizza lovers , you can fight for a stool by the entrance or stand cramped by the door
+pizza
+positive
+do not miss the wonderful veal dishes
+veal dishes
+positive
+just walking past this establishment during dinner hours will make you dream of garlic empowered sauce covering a tender veal cutlet
+establishment
+positive
+just walking past this establishment during dinner hours will make you dream of garlic empowered sauce covering a tender veal cutlet
+tender veal cutlet
+positive
+great pizza , cheap , and fast
+pizza
+positive
+dani 's pizza has got everyone hooked over here
+pizza
+positive
+everyone that tries just one slice of the pizza is automatically converted into a believer
+pizza
+positive
+*i can personally attest to that* i was so amazed at its amazing taste that i asked the cook behind the counter one day
+taste
+positive
+why is this so popular and good ? he said the secret was in the sauce , which is top notch
+sauce
+positive
+simply unbeatable~ dani 's is also the best bang for your buck because on wednesday 's , they have a slice for 0
+slice
+positive
+99 cents ! ( large pie for 7 bucks ! ) and these slices are really large
+pie
+positive
+99 cents ! ( large pie for 7 bucks ! ) and these slices are really large
+slices
+positive
+dani 's pizza is amazing , hands down
+pizza
+positive
+whatever you though you knew about good pizza means nothing until you try a slice at dani 's
+pizza
+positive
+the sauce is somewhat sweet but thats how we like , and the crust is allways crispy but bewhare , a slice to go ussually ends up being too hot for consuption lest you burn your mouth
+sauce
+positive
+the sauce is somewhat sweet but thats how we like , and the crust is allways crispy but bewhare , a slice to go ussually ends up being too hot for consuption lest you burn your mouth
+crust
+negative
+though ? get in beat the afternoon lunch crowds , or stop by on the late night at 3:30 when they are still serving up the most money pizza in the city
+serving
+positive
+there is even a great selection of beer
+beer
+positive
+you can only sit on the stools with a slice , as the main dining area downstairs is for real food
+slice
+positive
+you can only sit on the stools with a slice , as the main dining area downstairs is for real food
+food
+positive
+the staff is cool and friendly , and the place has been around since j
+staff
+positive
+i crave their sauce
+sauce
+positive
+i highly recommend the veal parmingana
+veal parmingana
+positive
+if your looking for real food , this is the place to eat
+food
+positive
+this place is magnificent ! the staff is very friendly , and the food is great
+staff
+positive
+this place is magnificent ! the staff is very friendly , and the food is great
+food
+positive
+small place - but the best pizza around
+place
+negative
+small place - but the best pizza around
+pizza
+positive
+the food is excellent and the atmosphere is quite lovely
+food
+positive
+the food is excellent and the atmosphere is quite lovely
+atmosphere
+positive
+the owner is very sweet and accommadating
+owner
+positive
